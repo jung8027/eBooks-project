@@ -1,5 +1,5 @@
 import {connect} from 'react-dom'
-import {getBooks} from './search'
+import {getBooks} from './searchcomponents'
 import {fromJS} from 'immutable'
 import Search from './search'
 
@@ -15,4 +15,4 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, actions)(search)
+export default connect(mapStateToProps, actions)(Search)
