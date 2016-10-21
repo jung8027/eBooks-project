@@ -1,17 +1,17 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+import Search from './components/search.js'
 
-var App = React.createClass({
-  render: function() {
-    return (
+
+const App = () => (
       <div>
-        <h1>Hello World!</h1>
+        <Search/>
       </div>
-    )
-  }
-})
+)
 
+document.addEventListener("DOMContentLoaded", () => {
 ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
+});
