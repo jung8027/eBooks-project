@@ -1,9 +1,10 @@
 import {fromJS} from 'immutable'
 import fetch from 'isomorphic-fetch'
 import {APIkey} from './APIkey'
+import { setBooks } from './actions'
+import store from './store'
 
 export const getBooks = (query) => {
-	console.log(query)
 	return (dispatch, getState)=>{
 		store.dispatch(setQuery(query))
 		(query) ? fetch ('https://www.googleapis.com/books/v1/volumes?q='+query+ '&filter=free-ebooks&maxResults=20&key=' +APIkey)
