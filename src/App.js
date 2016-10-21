@@ -1,17 +1,19 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Search from './components/search.js'
+import {Provider} from 'react-redux'
+import Store from './components/store'
 
 
 const App = () => (
-      <div>
-        <Search/>
-      </div>
+      <Provider store={Store}>
+       	 <Search />
+      </Provider>
 )
 
 document.addEventListener("DOMContentLoaded", () => {
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+	ReactDOM.render(
+ 		 <App />,
+ 		 document.getElementById('root')
+	);
 });
